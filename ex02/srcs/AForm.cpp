@@ -35,19 +35,19 @@ public:
 
 AForm::AForm():_isSigned(false),_gradeSign(0), _gradeExec(0)
 {
-    std::cout << "AForm default constructor called" << std::endl;
+    //std::cout << "AForm default constructor called" << std::endl;
 }
 
 
 AForm::AForm(const AForm &source):_name(source._name), _isSigned(source._isSigned), _gradeSign(source._gradeSign), _gradeExec(source._gradeExec)
 {
-    std::cout << "AForm copy constructor called" << std::endl;
+    //std::cout << "AForm copy constructor called" << std::endl;
 }
 
 
 AForm& AForm::operator=(const AForm &source)
 {
-    std::cout << "AForm copy assignment called" << std::endl;
+    //std::cout << "AForm copy assignment called" << std::endl;
     *this = source;
     return(*this);
 }
@@ -55,7 +55,7 @@ AForm& AForm::operator=(const AForm &source)
 
 AForm::~AForm()
 {
-    std::cout << "AForm destructor called" << std::endl;
+    //std::cout << "AForm destructor called" << std::endl;
 }
 
 void AForm::checkGrade(int grade)
@@ -83,12 +83,12 @@ std::ostream&	operator<<(std::ostream& stream, AForm const& cl)
 
 AForm::AForm(const std::string name, int gradeSign, int gradeExec): _name(name), _isSigned(false), _gradeSign(gradeSign), _gradeExec(gradeExec)
 {
-    std::cout << "AForm param assignment called" << std::endl;
+    //std::cout << "AForm param assignment called" << std::endl;
     checkGrade(gradeSign);
     checkGrade(gradeExec);
 }
 
-const std::string AForm::getName()
+const std::string AForm::getName() const
 {
     return _name;
 }

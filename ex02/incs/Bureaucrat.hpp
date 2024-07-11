@@ -6,7 +6,7 @@
 /*   By: emimenza <emimenza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/09 11:53:02 by emimenza          #+#    #+#             */
-/*   Updated: 2024/07/10 14:35:24 by emimenza         ###   ########.fr       */
+/*   Updated: 2024/07/11 13:24:56 by emimenza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,8 @@ class Bureaucrat
 
         class GradeTooLowException;
 	    class GradeTooHighException;
+
+        void executeForm(AForm const & form);
 };
 
 std::ostream&	operator<<(std::ostream& stream, Bureaucrat const& cl);

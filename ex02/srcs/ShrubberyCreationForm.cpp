@@ -6,7 +6,7 @@
 /*   By: emimenza <emimenza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 13:01:12 by emimenza          #+#    #+#             */
-/*   Updated: 2024/07/10 16:10:41 by emimenza         ###   ########.fr       */
+/*   Updated: 2024/07/11 16:07:19 by emimenza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,20 +30,20 @@ class ShrubberyCreationForm::FileError : public std::exception {
 
 ShrubberyCreationForm::ShrubberyCreationForm():AForm("ShrubberyCreationForm", 145, 137)
 {
-    std::cout << "ShrubberyCreationForm default constructor called" << std::endl;
+    //std::cout << "ShrubberyCreationForm default constructor called" << std::endl;
 }
 
 
 ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm &source): AForm(source)
 {
-    std::cout << "ShrubberyCreationForm copy constructor called" << std::endl;
+    //std::cout << "ShrubberyCreationForm copy constructor called" << std::endl;
     *this = source;
 }
 
 
 ShrubberyCreationForm& ShrubberyCreationForm::operator=(const ShrubberyCreationForm &source)
 {
-    std::cout << "ShrubberyCreationForm copy assignment called" << std::endl;
+    //std::cout << "ShrubberyCreationForm copy assignment called" << std::endl;
     *this = source;
     return(*this);
 }
@@ -51,13 +51,13 @@ ShrubberyCreationForm& ShrubberyCreationForm::operator=(const ShrubberyCreationF
 
 ShrubberyCreationForm::~ShrubberyCreationForm()
 {
-    std::cout << "ShrubberyCreationForm destructor called" << std::endl;
+    //std::cout << "ShrubberyCreationForm destructor called" << std::endl;
 }
 
 
 ShrubberyCreationForm::ShrubberyCreationForm(const std::string &target):AForm("ShrubberyCreationForm", 145, 137), _targetName(target)
 {
-    std::cout << "ShrubberyCreationForm param constructor called" << std::endl;
+    //std::cout << "ShrubberyCreationForm param constructor called" << std::endl;
 }
 
 const std::string ShrubberyCreationForm::getTargetName()
@@ -82,5 +82,4 @@ void ShrubberyCreationForm::execute(Bureaucrat const & executor) const
     {
         std::cerr << e.what() << '\n';
     }
-    
 }

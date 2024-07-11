@@ -6,7 +6,7 @@
 #    By: emimenza <emimenza@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/09 12:04:14 by emimenza          #+#    #+#              #
-#    Updated: 2024/07/10 13:17:47 by emimenza         ###   ########.fr        #
+#    Updated: 2024/07/11 12:24:52 by emimenza         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,9 @@ CFLAGS = -Wall -Wextra -Werror -std=c++98
 RM = rm -rf
 NAME = ex02
 
-SRCS = srcs/ShrubberyCreationForm.cpp\
+SRCS = srcs/PresidentialPardonForm.cpp\
+	   srcs/RobotomyRequestForm.cpp\
+	   srcs/ShrubberyCreationForm.cpp\
 	   srcs/Bureaucrat.cpp\
 	   srcs/AForm.cpp\
 	   main.cpp

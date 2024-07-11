@@ -6,7 +6,7 @@
 /*   By: emimenza <emimenza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/09 13:21:49 by emimenza          #+#    #+#             */
-/*   Updated: 2024/07/10 14:21:51 by emimenza         ###   ########.fr       */
+/*   Updated: 2024/07/11 13:24:00 by emimenza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ class AForm
         AForm(const std::string name, int gradeSign, int gradeExec);
         void display(std::ostream& stream) const;
         
-        const std::string getName();
+        const std::string getName()const;
         bool getSigned() const;
         int getGradeSign() const;
         int getGradeExec() const;
