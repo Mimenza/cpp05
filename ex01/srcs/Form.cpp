@@ -6,7 +6,7 @@
 /*   By: emimenza <emimenza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/09 13:21:46 by emimenza          #+#    #+#             */
-/*   Updated: 2024/07/10 12:19:34 by emimenza         ###   ########.fr       */
+/*   Updated: 2024/07/22 22:12:24 by emimenza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,19 +28,19 @@ public:
 
 Form::Form():_isSigned(false),_gradeSign(0), _gradeExec(0)
 {
-    std::cout << "Form default constructor called" << std::endl;
+    //std::cout << "Form default constructor called" << std::endl;
 }
 
 
 Form::Form(Form &source):_name(source._name), _isSigned(source._isSigned), _gradeSign(source._gradeSign), _gradeExec(source._gradeExec)
 {
-    std::cout << "Form copy constructor called" << std::endl;
+    //std::cout << "Form copy constructor called" << std::endl;
 }
 
 
 Form& Form::operator=(Form &source)
 {
-    std::cout << "Form copy assignment called" << std::endl;
+    //std::cout << "Form copy assignment called" << std::endl;
     *this = source;
     return(*this);
 }
@@ -48,7 +48,7 @@ Form& Form::operator=(Form &source)
 
 Form::~Form()
 {
-    std::cout << "Form destructor called" << std::endl;
+    //std::cout << "Form destructor called" << std::endl;
 }
 
 void Form::checkGrade(int grade)
@@ -76,7 +76,7 @@ std::ostream&	operator<<(std::ostream& stream, Form const& cl)
 
 Form::Form(const std::string name, int gradeSign, int gradeExec): _name(name), _isSigned(false), _gradeSign(gradeSign), _gradeExec(gradeExec)
 {
-    std::cout << "Form param assignment called" << std::endl;
+    //std::cout << "Form param assignment called" << std::endl;
     checkGrade(gradeSign);
     checkGrade(gradeExec);
 }

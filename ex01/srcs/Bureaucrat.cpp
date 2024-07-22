@@ -6,7 +6,7 @@
 /*   By: emimenza <emimenza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/09 11:52:59 by emimenza          #+#    #+#             */
-/*   Updated: 2024/07/10 12:29:40 by emimenza         ###   ########.fr       */
+/*   Updated: 2024/07/22 22:11:43 by emimenza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,13 +28,13 @@ public:
 
 Bureaucrat::Bureaucrat()
 {
-    std::cout << "Bureaucrat default constructor called" << std::endl;
+    //std::cout << "Bureaucrat default constructor called" << std::endl;
 }
 
 
 Bureaucrat::Bureaucrat(Bureaucrat &source)
 {
-    std::cout << "Bureaucrat copy constructor called" << std::endl;
+    //std::cout << "Bureaucrat copy constructor called" << std::endl;
     *this = source;
 }
 
@@ -52,21 +52,21 @@ void Bureaucrat::checkGrade(int grade)
 
 Bureaucrat::Bureaucrat(std::string name, int grade):_name(name)
 {
-    std::cout << "Bureaucrat param constructor called" << std::endl;
+    //std::cout << "Bureaucrat param constructor called" << std::endl;
     checkGrade(grade);
     _grade = grade;
 }
 
 Bureaucrat& Bureaucrat::operator=(Bureaucrat &source)
 {
-    std::cout << "Bureaucrat copy assignment called" << std::endl;
+    //std::cout << "Bureaucrat copy assignment called" << std::endl;
     *this = source;
     return(*this);
 }
 
 Bureaucrat::~Bureaucrat()
 {
-    std::cout << "Bureaucrat destructor called" << std::endl;
+    //std::cout << "Bureaucrat destructor called" << std::endl;
 }
 
 void		Bureaucrat::display(std::ostream& stream) const
