@@ -6,7 +6,7 @@
 /*   By: emimenza <emimenza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/09 11:52:59 by emimenza          #+#    #+#             */
-/*   Updated: 2024/07/11 16:06:41 by emimenza         ###   ########.fr       */
+/*   Updated: 2024/07/22 22:50:16 by emimenza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -122,5 +122,9 @@ void Bureaucrat::executeForm(AForm const &form)
         std::cout << this->getName() << " executed " << form.getName() << std::endl;
         
         form.execute(*this);
+    }
+    else {
+        std::cout << this->getName() << " couldn’t execute " << form.getName() << " because ";
+        throw Bureaucrat::GradeTooLowException();
     }
 }

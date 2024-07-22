@@ -6,7 +6,7 @@
 /*   By: emimenza <emimenza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 13:01:10 by emimenza          #+#    #+#             */
-/*   Updated: 2024/07/11 16:07:05 by emimenza         ###   ########.fr       */
+/*   Updated: 2024/07/22 22:22:07 by emimenza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ RobotomyRequestForm::~RobotomyRequestForm()
     //std::cout << "RobotomyRequestForm destructor called" << std::endl;
 }
 
-RobotomyRequestForm::RobotomyRequestForm(const std::string &target): AForm("RobotomyRequestForm", 145, 137), _targetName(target)
+RobotomyRequestForm::RobotomyRequestForm(const std::string &target): AForm("RobotomyRequestForm", 72, 45), _targetName(target)
 {
     //std::cout << "RobotomyRequestForm param constructor called" << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: emimenza <emimenza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 13:01:07 by emimenza          #+#    #+#             */
-/*   Updated: 2024/07/11 16:06:49 by emimenza         ###   ########.fr       */
+/*   Updated: 2024/07/22 22:21:44 by emimenza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ PresidentialPardonForm::~PresidentialPardonForm()
     //std::cout << "PresidentialPardonForm destructor called" << std::endl;
 }
 
-PresidentialPardonForm::PresidentialPardonForm(const std::string &target):AForm("PresidentialPardonForm", 145, 137), _targetName(target)
+PresidentialPardonForm::PresidentialPardonForm(const std::string &target):AForm("PresidentialPardonForm", 25, 5), _targetName(target)
 {
     //std::cout << "PresidentialPardonForm param constructor called" << std::endl;
 }
