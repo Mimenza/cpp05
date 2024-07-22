@@ -6,61 +6,67 @@
 /*   By: emimenza <emimenza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/09 11:52:59 by emimenza          #+#    #+#             */
-/*   Updated: 2024/07/09 12:25:08 by emimenza         ###   ########.fr       */
+/*   Updated: 2024/07/22 22:10:12 by emimenza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incs/Bureaucrat.hpp"
 
+class Bureaucrat::GradeTooHighException : public std::exception {
+public:
+    const char* what() const throw() {
+        return "Grade is too high!";
+    }
+};
+
+class Bureaucrat::GradeTooLowException : public std::exception {
+public:
+    const char* what() const throw() {
+        return "Grade is too low!";
+    }
+};
+
 Bureaucrat::Bureaucrat()
 {
-    std::cout << "Bureaucrat default constructor called" << std::endl;
+    //std::cout << "Bureaucrat default constructor called" << std::endl;
 }
 
 
 Bureaucrat::Bureaucrat(Bureaucrat &source)
 {
-    std::cout << "Bureaucrat copy constructor called" << std::endl;
+    //std::cout << "Bureaucrat copy constructor called" << std::endl;
     *this = source;
 }
 
 void Bureaucrat::checkGrade(int grade)
 {
-    try
+    if (grade > MIN_GRADE)
     {
-        if (grade > MIN_GRADE)
-        {
-            throw std::runtime_error("GradeTooLowException");
-        }
-        else if (grade < MAX_GRADE)
-        {
-            throw std::runtime_error("GradeTooHighException");
-        }
-        else
-            _grade = grade;
+        throw GradeTooLowException();
     }
-    catch (std::exception & e)
+    else if (grade < MAX_GRADE)
     {
-        std::cerr << "Bureaucrat: " << e.what() << std::endl;
+        throw GradeTooHighException();
     }
 }
 
 Bureaucrat::Bureaucrat(std::string name, int grade):_name(name)
 {
-    std::cout << "Bureaucrat param constructor called" << std::endl;
+    //std::cout << "Bureaucrat param constructor called" << std::endl;
     checkGrade(grade);
+    _grade = grade;
 }
 
 Bureaucrat& Bureaucrat::operator=(Bureaucrat &source)
 {
-    std::cout << "Bureaucrat copy assignment called" << std::endl;
+    //std::cout << "Bureaucrat copy assignment called" << std::endl;
     *this = source;
     return(*this);
 }
 
 Bureaucrat::~Bureaucrat()
 {
-    std::cout << "Bureaucrat destructor called" << std::endl;
+    //std::cout << "Bureaucrat destructor called" << std::endl;
 }
 
 void		Bureaucrat::display(std::ostream& stream) const
@@ -87,8 +93,10 @@ const std::string Bureaucrat::getName()
 void Bureaucrat::incrementGrade(void)
 {
     checkGrade(_grade - 1);
+    _grade--;
 }
 void Bureaucrat::decrementGrade(void)
 {
     checkGrade(_grade + 1);
+    _grade++;
 }
